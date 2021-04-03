@@ -1,2 +1,2 @@
-def cal()
+def call()
 {}
