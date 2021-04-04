@@ -1,7 +1,7 @@
-def call() {  
+def call(Map varParams) {  
   checkout([$class: 'GitSCM', 
-      branches: [[name: '*/main']], 
+      branches: [[name: varParams.branch]], 
       extensions: [], 
       userRemoteConfigs: [[credentialsId: 'b301cd92-1cd3-4e71-aeba-2864fcf1d58e', 
-      url: 'https://github.com/shriram3003/Release_Report.git']]])  
+      url: varParams.url]]])  
   }
